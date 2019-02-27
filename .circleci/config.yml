@@ -7,7 +7,6 @@ jobs:
   build:
     docker:
       # specify the version you desire here
-      # <-UPDATE TO YOUR VERSION OF NODE, check with 'node --version' in terminal
       - image: circleci/node:10.15.0
 
       # Specify service dependencies here if necessary
@@ -27,7 +26,6 @@ jobs:
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
 
-      # CHANGED TO 'npm install && npm install --save readline-sync'
       - run: npm install && npm install --save readline-sync
 
       - save_cache:
@@ -35,6 +33,5 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
 
-     # run tests!
-     # CHANGED TO 'npm test'
-     - run: npm test
+      # run tests!
+      - run: npm test
