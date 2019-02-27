@@ -8,7 +8,7 @@ jobs:
     docker:
       # specify the version you desire here
       # <-UPDATE TO YOUR VERSION OF NODE, check with 'node --version' in terminal
-      -image: circleci/node:10.15.0
+      - image: circleci/node:10.15.0
 
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
