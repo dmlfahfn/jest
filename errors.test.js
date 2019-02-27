@@ -79,8 +79,4 @@ describe ("Total Product Cost", () => {
         });
 });
 
-describe("Add Products" , () => {
-
-test("")
-});
 
